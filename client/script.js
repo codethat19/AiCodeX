@@ -3,6 +3,7 @@ import user from './assets/user.svg';
 
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
+const emptyChat = document.querySelector('.empty-chat__container');
 
 let loadInterval;
 
@@ -70,6 +71,7 @@ function chatStripe (isAi, value, uniqueId) {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+  emptyChat.style.display = "none";
 
   const data = new FormData(form);
 

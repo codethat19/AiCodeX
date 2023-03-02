@@ -1,22 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Ubuntu', sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   color: white;
+  /* font-size: small; */
 }
 
 body {
   background: #222831;
   /* color:#080808; */
   width: 90%;
+  /* font-size: small; */
 }
 .logo {
   position: absolute;
-  left: 46%;
+  left: 47%;
   /* align-items: center; */
 }
 header {
@@ -24,7 +28,7 @@ header {
 	/* text-align: center; */
 	width: 100%;
   max-width: 1440px;
-	height: auto;
+	height: 3rem;
 	background-size: cover;
 	/* background-attachment: fixed; */
   /* display: inline; */
@@ -35,6 +39,7 @@ header {
 }
 header .overlay{
 	width: 100%;
+  max-width: 1440px;
 	height: 100%;
 	padding: 10px;
   /* display: inline; */
@@ -58,20 +63,31 @@ h4, p {
   /* float: right; */
 	/* margin-bottom: 10px; */
 }
-img.bot {
-  /* float: left; */
+.empty-chat__container {
+  /* position: relative; */
+  /* display: block; */
+  width: 100%;
+  max-width: 1440px;
+  text-align: center;
+  margin-bottom: 12rem;
 }
-img.user {
-  /* float:right; */
-  /* visibility: hidden; */
+.empty-chat__container h1 {
+  font-size: 7rem;
+  background: linear-gradient(177deg, rgba(61,235,113,1) 0%, rgba(103,93,251,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.empty-chat__container h3 {
+  font-size: 2rem;
+  background: linear-gradient(67deg, rgba(131,61,235,1) 0%, rgba(251,93,213,1) 100%);
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;  
 }
 #app {
   width: 100vw;
   height: 100vh;
-  /* background: #082032; */
-
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
   justify-content: space-between;
 }
@@ -85,6 +101,7 @@ img.user {
 
   display: flex;
   flex-direction: column;
+  
   gap: 1.5rem;
   /* background: #ebeef7; */
   -ms-overflow-style: none;
@@ -176,7 +193,8 @@ img.user {
   flex: 1;
   /* float: left; */
   /* color: #dcdcdc; */
-  font-size: 20px;
+  font-size: 17px;
+  line-height: 1.4;
   margin-top: 1%;
   /* width: max-content; */
   /* max-width: 60%; */
