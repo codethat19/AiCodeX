@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   //Fetch data from server => Bot's response
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('https://aicodex-server.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
