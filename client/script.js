@@ -48,29 +48,25 @@ function chatStripe (isAi, value, uniqueId) {
 
       <div class="chat">
       ${isAi ? 
-        `<div class="profile">
-          <img 
-            src=${isAi ? bot : user}
-            alt="${isAi ? "bot" : "user"}"
-            class=${isAi ? "bot" : "user"}
-          />
-        </div>
+        `
         <div class="message" id=${uniqueId}>${value}</div>` 
         : 
          `<div class="message" id=${uniqueId}>${value}</div>
-          <div class="profile">
-            <img 
-              src=${isAi ? bot : user}
-              alt="${isAi ? "bot" : "user"}"
-              class=${isAi ? "bot" : "user"}
-            />
-          </div>`} 
+          `} 
       </div>
       
     </div>
     `
   )
 }
+
+{/* <div class="profile">
+          <img 
+            src=${isAi ? bot : user}
+            alt="${isAi ? "bot" : "user"}"
+            class=${isAi ? "bot" : "user"}
+          />
+</div> */}
 
 const handleSubmit = async (e) => {
   e.preventDefault();
