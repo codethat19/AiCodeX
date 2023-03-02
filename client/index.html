@@ -5,15 +5,25 @@
     <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AiCodeX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="app">
-      <header>AiCodeX Powered by</header>
+      <header>
+        <div  class="overlay">
+          <img src="favicon.ico" class="logo"/>
+          <h2>AiCodeX</h2>
+          <h4>Powered by</h4>
+          <p>OpenAI</p>        
+      </div>
+      </header>
       <div id="chat_container"></div>
 
       <form>
-        <textarea name="prompt" rows="1" cold="1" placeholder="Ask CodeX..."></textarea>
+        <textarea name="prompt" rows="1" cold="1" placeholder="Start typing..."></textarea>
         <button type="submit"><img src="assets/send.svg" /></button>
       </form>
     </div>

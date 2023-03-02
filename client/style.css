@@ -4,17 +4,70 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Alegreya Sans", sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
 }
 
 body {
-  background: #343541;
+  background: #222831;
+  /* color:#080808; */
+  width: 90%;
+}
+.logo {
+  position: absolute;
+  left: 50%;
+  /* align-items: center; */
+}
+header {
+	/* background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg'); */
+	/* text-align: center; */
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	/* background-attachment: fixed; */
+  /* display: inline; */
+	/* position: relative; */
+	/* overflow: hidden; */
+	/* border-radius: 0 0% 15% 15%; */
+  margin-bottom: 2rem;
+}
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+  /* display: inline; */
+  /* margin-bottom: 20px; */
+	color: #FFF;
+	/* text-shadow: 1px 1px 1px #333; */
+  /* background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%); */
+	/* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+}
+h1 {
+	/* font-family: 'Dancing Script', cursive; */
+	font-size: 30px;
+  /* display: inline; */
+	margin-bottom: 10px;
 }
 
+h4, p {
+	/* font-family: 'Open Sans', sans-serif; */
+  font-size: 15px;
+  display: inline;
+  /* float: right; */
+	/* margin-bottom: 10px; */
+}
+img.bot {
+  /* float: left; */
+}
+img.user {
+  /* float:right; */
+  /* visibility: hidden; */
+}
 #app {
   width: 100vw;
   height: 100vh;
-  background: #343541;
+  /* background: #082032; */
 
   display: flex;
   flex-direction: column;
@@ -24,14 +77,15 @@ body {
 
 #chat_container {
   flex: 1;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  max-width: 1440px;
+  height: 100vh;
   overflow-y: scroll;
 
   display: flex;
   flex-direction: column;
-  gap: 10px;
-
+  gap: 1.5rem;
+  /* background: #ebeef7; */
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -45,33 +99,63 @@ body {
 }
 
 .wrapper {
-  width: 100%;
-  padding: 15px;
+  /* width: 90%; */
+  display: inline-block;
+  /* width: ; */
+  background: rgb(61,225,235);
+  background: linear-gradient(82deg, rgba(61,225,235,1) 0%, rgba(103,93,251,1) 100%);
+  border-radius: 1.5rem 1.5rem 0 1.5rem;
+  padding: 1rem;
+}
+.wrapper.ai {
+  text-align: left;
+  width: max-content;
+  max-width: 100%;
+}
+.wrapper.user {
+  text-align: right;
+  width: max-content;
+  margin-left: auto;
+  max-width: 100%;
+}
+.wrapper.profile {
+  /* align-items: flex-end; */
+  align-content: right;
 }
 
 .ai {
-  background: #40414F;
+  /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+  /* background: linear-gradient(146deg, rgba(79,235,61,1) 0%, rgba(93,237,251,1) 100%); */
+  background: rgb(169,61,235);
+  background: linear-gradient(231deg, rgba(169,61,235,1) 0%, rgba(251,93,93,1) 100%);
+  border-radius: 1.5rem 1.5rem 1.5rem 0;
+  width: auto;
 }
 
 .chat {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-
+  border-radius: 1rem;
   display: flex;
+  float: right;
   flex-direction: row;
   align-items: flex-start;
-  gap: 10px;
+  gap: 1rem;
+  
 }
 
 .profile {
   width: 36px;
   height: 36px;
-  border-radius: 5px;
-
-  background: #5436DA;
-
+  border-radius: 100%;
+  /* text-align:left; */
+  /* position:relative; */
+  background: #147efb;
+  /* float: inline-end; */
+  /* margin: 0; */
   display: flex;
+  /* display: inline-block; */
   justify-content: center;
   align-items: center;
 }
@@ -83,17 +167,20 @@ body {
 .profile img {
   width: 60%;
   height: 60%;
+  border-radius: 100%;
   object-fit: contain;
 }
 
 .message {
   flex: 1;
-
-  color: #dcdcdc;
+  /* float: left; */
+  /* color: #dcdcdc; */
   font-size: 20px;
-
-  max-width: 100%;
+  margin-top: 1%;
+  /* width: max-content; */
+  /* max-width: 60%; */
   overflow-x: scroll;
+  /* display: inline-block; */
 
   /*
    * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
@@ -112,27 +199,28 @@ body {
   display: none;
 }
 
+/* Form elements for typing prompts */
+
 form {
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 10px;
-  background: #40414F;
-
+  max-width: 1440px;
+  margin: 1rem 0 0.3rem 0;
+  padding: 0.2rem;
+  background: #393E46;
+  color: #393E46;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  /* gap: 100px; */
+  border-radius: 1rem;
 }
 
 textarea {
   width: 100%;
-
-  color: #fff;
   font-size: 18px;
-
   padding: 10px;
+  margin: 10px;
   background: transparent;
-  border-radius: 5px;
+  /* border-radius: 1rem; */
   border: none;
   outline: none;
   resize: none;
